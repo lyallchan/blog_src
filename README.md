@@ -9,9 +9,7 @@
 ```bash
 git clone git@github.com:lyallchan/blog_src.git blog
 cd blog
-cnpm install hexo-cli -g
-cnpm install hexo-renderer-sass --save
-cnpm install hexo-renderer-jade --save
+cnpm install 
 ```
 
 # 增加文章和发布
