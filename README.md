@@ -4,7 +4,7 @@
 
 # 使用环境
 
-安装好nodejs和cnpm
+安装好nodejs和cnpm，可以参考这篇[文章](http://lyallchan.github.io/2015/12/04/%E5%AE%89%E8%A3%85node-for-windows/)
 
 ```bash
 cnpm install hexo-cli -g
