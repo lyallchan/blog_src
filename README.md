@@ -7,6 +7,7 @@
 安装好nodejs和cnpm
 
 ```bash
+cnpm install hexo-cli -g
 git clone git@github.com:lyallchan/blog_src.git blog
 cd blog
 cnpm install 
