@@ -19,8 +19,8 @@ menu:
   #   directory: atom.xml
   #   icon: icon-rss
 links:
-  - title: 项目仓库
-    url: https://github.com/lyallchan/lyallchan.github.io
+  - title: 项目源码
+    url: https://github.com/lyallchan/blog_src
   # - title: site-name2
   #   url: http://www.example2.com/
   # - title: site-name3
