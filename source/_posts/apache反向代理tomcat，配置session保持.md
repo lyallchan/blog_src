@@ -1,6 +1,6 @@
 toc: true
 title: apache反向代理tomcat，配置session保持
-date: 2015-12-04 16:31:06
+date: 2015-12-04 16:31:07
 tags: [apache, tomcat, proxy]
 ---
 配置tomcat集群，关键是要解决session的问题，这篇文章讲述了自己理解的session含义，apache和tomcat如何配置以解决session问题。
@@ -38,7 +38,7 @@ session sticky的目标是记住用户第一次http请求访问的应用服务�
 上面方法在Apache [proxy_balancer官方文档](http://httpd.apache.org/docs/2.4/mod/mod_proxy_balancer.html)中有详细说明。
 用这种方法只需要在apache中配置，tomcat不需要特别的配置。
  
-```conf
+```
 # reverse proxy for tomcat
 <Proxy balancer://tomcat>
     BalancerMember http://192.168.56.2:8080 route=1
@@ -57,12 +57,12 @@ ProxypassReverse /tomcat balancer://tomcat/tomcat
 2. apache配置中，增加ProxySet，指定依据JESSIONID使用stickysession方式。JESSIONID是tomcat默认设置的cookie值。
  
 tomcat配置，两个应用服务器分别指定`1`和`2`
-```conf
+```
      <Engine name="Catalina" defaultHost="localhost" jvmRoute="1">
 ```
  
 apache配置
-```conf
+```
 # reverse proxy for tomcat
 <Proxy balancer://tomcat>
     BalancerMember http://192.168.56.2:8080
